@@ -52,12 +52,12 @@ function! unite#sources#vim_bookmarks#define()
 endfunction
 call unite#define_source(s:source)  " Required for reloading
 
+" set in vimrc is not work, if uncommon below codes
 " define default converter
-call unite#custom_source(
-      \ 'vim_bookmarks',
-      \ 'converters',
-      \ 'converter_vim_bookmarks_short')
-
+" call unite#custom#source(
+"       \ 'vim_bookmarks',
+"       \ 'converters',
+"       \ 'converter_vim_bookmarks_short')
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
