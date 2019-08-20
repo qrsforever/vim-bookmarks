@@ -60,13 +60,13 @@ function! BookmarkToggle()
   endif
   let current_line = line('.')
   if bm#has_bookmark_at_line(file, current_line)
-    if g:bookmark_show_toggle_warning ==# 1 && bm#is_bookmark_has_annotation_by_line(file, current_line)
-      let delete = confirm("Delete Annotated bookmarks?", "&Yes\n&No", 2)
-      if (delete !=# 1)
-        echo "Ignore!"
-        return
-      endif
-    endif
+    " if g:bookmark_show_toggle_warning ==# 1 && bm#is_bookmark_has_annotation_by_line(file, current_line)
+    "   let delete = confirm("Delete Annotated bookmarks?", "&Yes\n&No", 2)
+    "   if (delete !=# 1)
+    "     echo "Ignore!"
+    "     return
+    "   endif
+    " endif
     call s:bookmark_remove(file, current_line)
     echo "Bookmark removed"
   else

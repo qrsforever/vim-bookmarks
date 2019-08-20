@@ -29,8 +29,8 @@ endfunction
 function! bm_sign#define_highlights()
   highlight BookmarkSignDefault ctermfg=33 ctermbg=NONE
   highlight BookmarkAnnotationSignDefault ctermfg=28 ctermbg=NONE
-  highlight BookmarkLineDefault ctermfg=232 ctermbg=33
-  highlight BookmarkAnnotationLineDefault ctermfg=232 ctermbg=28
+  highlight BookmarkLineDefault ctermfg=NONE ctermbg=NONE
+  highlight BookmarkAnnotationLineDefault ctermfg=NONE ctermbg=NONE
   highlight default link BookmarkSign BookmarkSignDefault
   highlight default link BookmarkAnnotationSign BookmarkAnnotationSignDefault
   highlight default link BookmarkLine BookmarkLineDefault
