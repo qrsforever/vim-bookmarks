@@ -174,7 +174,7 @@ function! BookmarkShowAll()
   else
     call s:refresh_line_numbers()
     if exists(':Unite')
-      exec ":Unite vim_bookmarks"
+      exec ":Unite -buffer-name=bookmarks -no-empty vim_bookmarks"
     elseif exists(':CtrlP') == 2 && g:bookmark_disable_ctrlp == 0
       exec ":CtrlPBookmark"
     else
