@@ -6,9 +6,11 @@ function! s:format_bookmark(candidate) " {{{
   let file = a:candidate.action__path
   let line_nr = a:candidate.action__line
   let bookmark = a:candidate.action__bookmark
-  return printf("%s:%d | %s", pathshorten(file), line_nr,
+  return printf(" %s\t%26s:%-4d| %s",
+        \ bookmark.annotation !=# '' ? "☰" : "⚑",
+        \   fnamemodify(file, ':t'), line_nr,
         \   bookmark.annotation !=# ''
-        \     ? "Annotation: " . bookmark.annotation
+        \     ? bookmark.annotation
         \     : (bookmark.content !=# "" ? bookmark.content
         \                                : "empty line")
         \ )
